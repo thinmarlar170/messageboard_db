@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f3f5ef">
+    <title>Commonplace | Message Board</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="wordmark" href="/" aria-label="Commonplace home"><span class="mark" aria-hidden="true">c</span> commonplace</a>
+      <span class="topbar-note"><span class="status-dot" aria-hidden="true"></span> The public board</span>
+    </header>
+
+    <main class="layout">
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow">A small corner of the internet</p>
+        <h1 id="page-title">Leave a note.<br><em>Stay awhile.</em></h1>
+        <p class="intro-copy">Thoughts, hellos, and things worth passing along. Your note joins the conversation below.</p>
+        <div class="intro-rule"><span></span><span></span><span></span></div>
+        <p class="privacy-note">Public board · No account needed</p>
+      </section>
+
+      <section class="board" aria-label="Message board">
+        <form id="post-form" class="composer">
+          <div class="composer-heading">
+            <h2>Write a note</h2>
+            <span class="writing-icon" aria-hidden="true">✳</span>
+          </div>
+          <label for="name">Your name</label>
+          <input id="name" name="name" type="text" maxlength="80" placeholder="What should we call you?" required>
+          <label for="message">Your message</label>
+          <textarea id="message" name="message" rows="4" maxlength="2000" placeholder="What's on your mind?" required></textarea>
+          <div class="form-footer">
+            <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+            <button type="submit"><span>Post note</span><span aria-hidden="true">↗</span></button>
+          </div>
+        </form>
+
+        <div class="feed-heading">
+          <h2>On the board</h2>
+          <span id="post-count" class="post-count">0 notes</span>
+        </div>
+        <div id="posts" class="posts" aria-live="polite">
+          <p class="empty-state">Gathering the latest notes…</p>
+        </div>
+      </section>
+    </main>
+    <footer><span>Commonplace</span><span>Made for the things we share.</span></footer>
+  </body>
+</html>

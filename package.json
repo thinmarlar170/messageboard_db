@@ -1,0 +1,22 @@
+{
+  "name": "messageboard-db",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A simple public message board",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.119.0",
+    "dotenv": "^18.0.9",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "supabase": "^3.0.0"
+  }
+}
